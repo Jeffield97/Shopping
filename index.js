@@ -4,10 +4,12 @@ const flotante = document.querySelector(".flotante");
 const cart__items = document.querySelector(".cart__items");
 const container = document.querySelector(".container");
 const url = "https://academlo-api-production.up.railway.app/api/products";
-let items__in__cart = [];
+const items__in__cart = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-  items__in__cart = JSON.parse(localStorage.getItem("products"));
+  if (JSON.parse(localStorage.getItem("products"))) {
+    items__in__cart = JSON.parse(localStorage.getItem("products"));
+  }
   renderCart(items__in__cart);
 });
 //Cart animation
