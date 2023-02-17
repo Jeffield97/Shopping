@@ -4,7 +4,7 @@ const flotante = document.querySelector(".flotante");
 const cart__items = document.querySelector(".cart__items");
 const container = document.querySelector(".container");
 const url = "https://academlo-api-production.up.railway.app/api/products";
-const items__in__cart = [];
+let items__in__cart = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   if (JSON.parse(localStorage.getItem("products"))) {
