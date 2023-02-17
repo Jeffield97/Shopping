@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+body {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+nav {
+  position: sticky;
+  top: 0;
+  padding: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(79, 79, 80);
+  z-index: 10;
+  background-color: rgb(242, 242, 243);
+  /* box-shadow: 0px 2px 5px 1px gray; */
+}
+nav img {
+  width: 6vw;
+  height: 6vw;
+}
+.nav__title {
+  font-size: 50px;
+  font-weight: 700;
+}
+nav button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+.fa-solid {
+  color: rgb(242, 242, 243);
+}
+nav .fa-solid {
+  color: rgb(105, 105, 107);
+}
+.fa-solid:hover {
+  color: rgb(223, 223, 222);
+  scale: 1.2;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+.flotante {
+  top: 8.1vw;
+  border-radius: 3px;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  width: 30%;
+  left: 100%;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+  z-index: 5;
+  box-shadow: 0px 0px 2px 0.4px rgb(113, 113, 113);
+  overflow-y: scroll;
+  max-height: 80vh;
+  min-height: fit-content;
+}
+.flotante__visible {
+  left: 69.9%;
+}
+.cart__title {
+  text-align: center;
+  padding: 1vw 0px;
+  font-weight: 400;
+  background-color: rgb(242, 241, 241);
+  font-weight: 700;
+  color: rgb(52, 51, 51);
+}
+.cart__total,
+.cart__delete {
+  text-align: center;
+  padding: 1vw;
+  background-color: rgb(28, 92, 253);
+  border: none;
+  width: 100%;
+  font-size: 1vw;
+  font-weight: 700;
+  color: aliceblue;
+  position: relative;
+  cursor: pointer;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+.cart__delete {
+  background-color: rgb(255, 58, 58);
+}
+.cart__delete:hover {
+    background-color: rgb(255, 88, 88);
+  }
+.cart__total:hover {
+  background-color: rgb(95, 140, 255);
+}
+/* HEADER */
+header {
+  padding: 5vw 0px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(55, 57, 71);
+}
+/* MAIN */
+.main {
+  margin-top: 3vw;
+}
+
+/* Card */
+.card__cart {
+  padding: 2vw 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* border-top: solid .1px rgb(169, 169, 169); */
+  border-bottom: solid 0.1px rgb(169, 169, 169);
+}
+
+.card__cart--product {
+  width: 4vw;
+  border-radius: 0.4vw;
+  overflow: hidden;
+  box-shadow: 0px 0px 2px 0.4px rgb(77, 77, 77);
+}
+
+.card__cart--name {
+  width: 40%;
+  text-align: center;
+}
+
+.card__cart--price::before {
+  content: "$";
+}
+.card__cart--product img {
+  width: 100%;
+}
+.card__cart button {
+  border: none;
+  background-color: rgb(252, 61, 61);
+  padding: 0.5vw;
+  border-radius: 0.2vw;
+  color: rgb(231, 231, 231);
+  cursor: pointer;
+}
+/* Container */
+.container {
+  display: flex;
+  margin: 2vw;
+  flex-wrap: wrap;
+  gap: 5vw;
+  justify-content: space-between;
+}
+/* card */
+.card {
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.5vw;
+  position: relative;
+  box-shadow: 0px 0px 2px 0.5px rgb(190, 190, 190);
+  cursor: pointer;
+}
+.card:hover {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  box-shadow: 0px 0px 10px 3px rgb(148, 148, 148);
+  transform: translateY(-1vw);
+}
+.card__image img {
+  width: 70%;
+  height: 70%;
+  padding: 3vw;
+  background-color: rgb(255, 255, 255);
+}
+.card__price {
+  text-align: center;
+  width: 100%;
+  font-size: 1.4vw;
+  font-weight: bolder;
+  position: absolute;
+  top: 60%;
+  color: rgb(56, 56, 56);
+}
+.card__price::before {
+  content: "$";
+}
+.card__name {
+  margin: 2vw 2vw;
+}
+.card button {
+  border: none;
+  font-size: small;
+  width: 100%;
+  padding: 1vw 0px;
+  color: whitesmoke;
+  background-color: rgb(252, 58, 58);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: rgb(58, 136, 252);
+  font-weight: bolder;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+}
+footer {
+  background-color: rgb(55, 57, 71);
+  padding: 1vw 0px;
+  text-align: center;
+  color: aliceblue;
+  font-size: 1vw;
+}
